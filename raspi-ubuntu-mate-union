@@ -16,16 +16,15 @@ CMake Error at CMakeLists.txt:30 (string):
 
 -- Onion version is 
 -- Using epoll as poller
--- Could NOT find GnuTLS (missing:  GNUTLS_LIBRARY GNUTLS_INCLUDE_DIR) 
--- Could NOT find GCrypt, try to set the path to GCrypt root folder in the system variable GCRYPT_ROOT_DIR (missing:  GCRYPT_INCLUDE_DIR GCRYPT_LIBRARIES) 
-Gnutls or gcrypt not found. SSL support is not compiled in.
+-- Found GCrypt: /usr/include (found version "1.6.5")
+-- SSL support is compiled in.
 -- Checking for module 'sqlite3'
 --   No package 'sqlite3' found
 SQLite session support is not compiled in.
 -- Redis session support is compiled in.
 -- pthreads found. Threading support is compiled in.
 -- WebDAV support is compiled in.
-No PAM support.
+-- PAM support is compiled in handlers.
 -- libpng found. png support is compiled in at extras.
 -- Adding cairo examples.
 -- jpeg support is compiled in at extras.
@@ -33,10 +32,10 @@ No PAM support.
 -- Could NOT find Boehm_GC (missing:  BOEHM_GC_LIBRARIES BOEHM_GC_INCLUDE_DIR) 
 -- NOT compiling Boehm GC examples
 -- Some extra test are compiled.
--- Could NOT find SYSTEMD (missing:  SYSTEMD_INCLUDE_DIRS SYSTEMD_LIBRARIES) 
-Systemd support is not compiled in. Install libsystemd-dev | systemd-devel
+-- Systemd support compiled in.
 md2man-roff NOT found, NOT compiling manpages. Install it via 'gem install md2man'
 -- Prepared for packaging
+-- Compiling HTTPS support
 -- Compiling WebDAV support
 -- Found include files png.h;jpeg.h
 CMake Error at src/onion/extras/CMakeLists.txt:31 (SET_TARGET_PROPERTIES):
@@ -48,15 +47,9 @@ CMake Error at src/onion/CMakeLists.txt:107 (SET_TARGET_PROPERTIES):
   set_target_properties called with incorrect number of arguments.
 
 
-CMake Warning at examples/CMakeLists.txt:9 (message):
-  Oterm without authentication support! May be very unsecure.
-
-
-CMake Warning at examples/CMakeLists.txt:14 (message):
-  Some examples are disabled as you dont have PAM: otop, basic, fileserver.
-
-
 -- jQuery at /usr/share/javascript/jquery/jquery.min.js
 -- Using system provided jquery for oterm
+-- Looking for certool
+-- Not found certool not compiling 06-server
 -- Configuring incomplete, errors occurred!
 See also "/home/pi/fingerprint/onion/build/CMakeFiles/CMakeOutput.log".
